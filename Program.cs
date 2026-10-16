@@ -50,18 +50,32 @@
         }
         static void KitalaltTomb()
         {
-            Console.WriteLine("Kérem a tömb elemének a számát: ");
+            Console.Write("Kérem a tömb elemének a számát: ");
             int N = Convert.ToInt32(Console.ReadLine());
+            int[] NelemuTomb = new int[N];
+            Console.Write("Milyen intervallumból töltsük fel a tömböt véletlen számokkal?: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < NelemuTomb.Length; i++)
+            {
+                Random rnd = new Random();
+                NelemuTomb[i] = rnd.Next(a, b + 1);
+            }
+            for(int i = 0; i < NelemuTomb.Length; i++)
+            {
+                Console.WriteLine($"Az {i+1}. szám: {NelemuTomb[i]}");
+            }
+            
         }
         
         static void Main(string[] args)
         {
-           feltoltes();
-           Console.WriteLine();
-           forditott();
-           Console.WriteLine();
-           Masodik();
-           Megadott();
+           //feltoltes();
+           //Console.WriteLine();
+           //forditott();
+           //Console.WriteLine();
+           //Masodik();
+           //Megadott();
            KitalaltTomb();
         }
     }
