@@ -18,11 +18,21 @@
                 Console.WriteLine(tomb[i]);
             }
         }
+        static void Masodik()
+        {
+           
+            for(int i = 1;  i < tomb.Length; i += 2)
+            {
+                Console.WriteLine($"Az {i+1}. szám: {tomb[i]}");
+            }
+        }
         static void Main(string[] args)
         {
            feltoltes();
            Console.WriteLine();
            forditott();
+           Console.WriteLine();
+           Masodik();
         }
     }
 }
